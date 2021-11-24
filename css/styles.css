@@ -1,0 +1,50 @@
+* {
+  font-family: "EB Garamond", serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: lime;
+}
+
+nav img {
+  height: 2rem;
+  border-radius: 50%;
+}
+
+nav img:hover {
+  border: lime 3px solid;
+  height: 2.5rem;
+}
+
+.navbar {
+  padding: 0 !important;
+}
+
+nav.navbar ul li a:hover {
+  color: lime !important;
+}
+
+section {
+  padding-top: 2%;
+  background: black;
+}
+
+.home img {
+  border-radius: 50%;
+}
+
+.content img {
+  padding-bottom: 10%;
+}
+
+ul.dropdown-menu {
+  padding: 0;
+}
+
+ul.dropdown-menu li a {
+  color: white;
+}
+
+div.carousel button {
+  opacity: 0;
+}
