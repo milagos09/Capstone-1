@@ -1,6 +1,6 @@
 * {
   font-family: "EB Garamond", serif;
-  background-color: black;
+  background-color: #09070a;
   margin: 0;
   padding: 0;
   color: lime;
@@ -26,10 +26,10 @@ nav.navbar ul li a:hover {
 
 section {
   padding-top: 2%;
-  background: black;
+  background: #09070a;
 }
 
-.home img {
+.about img {
   border-radius: 50%;
 }
 
@@ -47,4 +47,18 @@ ul.dropdown-menu li a {
 
 div.carousel button {
   opacity: 0;
+}
+
+hr {
+  border: 1px silver solid;
+  margin: 0;
+  padding: 0;
+}
+p {
+  color: azure;
+  text-align: start;
+}
+
+.home div.container-fluid {
+  padding: 0;
 }
