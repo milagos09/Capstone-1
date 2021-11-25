@@ -1,68 +1,3 @@
-/* * {
-  font-family: "EB Garamond", serif;
-  background-color: #09070a;
-  margin: 0;
-  padding: 0;
-  color: lime;
-}
-
-nav img {
-  height: 2rem;
-  border-radius: 50%;
-}
-
-nav img:hover {
-  border: lime 3px solid;
-  height: 2.5rem;
-}
-
-.navbar {
-  padding: 0 !important;
-}
-
-nav.navbar ul li a:hover {
-  color: lime !important;
-}
-
-section {
-  padding-top: 2%;
-  background: #09070a;
-}
-
-.about img {
-  border-radius: 50%;
-}
-
-.content img {
-  padding-bottom: 10%;
-}
-
-ul.dropdown-menu {
-  padding: 0;
-}
-
-ul.dropdown-menu li a {
-  color: white;
-}
-
-div.carousel button {
-  opacity: 0;
-}
-
-hr {
-  border: 1px silver solid;
-  margin: 0;
-  padding: 0;
-}
-p {
-  color: azure;
-  text-align: start;
-}
-
-.home div.container-fluid {
-  padding: 0;
-} */
-
 * {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
@@ -85,26 +20,53 @@ nav i {
 
 section.home div {
   padding: 1% 0;
+  color: rgba(240, 255, 255, 0.808);
 }
 
 div.title h1 {
   font-weight: 600;
+  color: #d54e00;
+}
+
+div.title p,
+h1 {
+  font-weight: 600;
+  color: grey;
 }
 
 div.banner-caption {
   position: absolute;
   margin: -40% 2%;
   z-index: 1;
-  color: azure;
-  opacity: 40%;
+  color: rgba(240, 255, 255, 0.808);
 }
 
-div.banner-caption button {
-  color: azure;
+div.banner-caption p {
+  color: gray;
 }
 
 div.carousel button {
   padding: 0 1rem;
+  color: azure;
+}
+
+div.carousel img {
+  margin-bottom: 1rem;
+}
+
+h4.story {
+  color: #d54e00;
+  padding-bottom: 0.5rem;
+}
+
+p.story {
+  color: rgba(240, 255, 255, 0.808);
+}
+
+div.card {
+  margin-bottom: 2rem;
+  color: rgba(7, 7, 7, 0.863);
+  background-color: rgba(255, 255, 255, 0.925);
 }
 
 /* GOOGLE MAP  */
@@ -124,15 +86,25 @@ section.contacts form {
 }
 
 section.contacts div {
-  padding: 0.5rem 0;
+  padding: 0.5;
 }
 
 section.contacts label.label-text {
   padding: 0.3rem 0;
 }
 
+section.contacts label {
+  color: azure;
+}
+
 section.contacts input {
   width: 80%;
+}
+
+section.contacts textarea {
+  width: 80%;
+  height: 5rem;
+  margin-bottom: 1rem;
 }
 
 section.contacts input[type="checkbox"] {
@@ -142,12 +114,14 @@ section.contacts input[type="checkbox"] {
 
 section.contacts button {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: azure;
 }
 
 footer {
   background-color: black;
   color: azure;
-  margin-bottom: 0;
+  padding: 1rem 0;
 }
 
 footer i {
@@ -164,9 +138,28 @@ footer a {
 }
 
 i.bi:hover {
-  color: orange;
+  color: #d54e00;
 }
 
-img {
-  border: 0.1px solid orange;
+nav ul li a:hover {
+  color: #d54e00 !important;
+}
+
+div button:hover {
+  color: #d54e00 !important;
+}
+
+div.card a:hover {
+  color: #d54e00;
+  background-color: silver;
+}
+
+div.row {
+  background-color: black;
+}
+
+section {
+  /* background-color: rgb(212, 212, 212); */
+  background-color: black;
+  padding-top: 1%;
 }

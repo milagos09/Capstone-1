@@ -25,6 +25,7 @@
           <i class="bi bi-facebook"></i>
           <i class="bi bi-instagram"></i>
           <i class="bi bi-linkedin"></i>
+          <i class="bi bi-github"></i>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,7 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#home">Home</a>
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
@@ -62,7 +63,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contacts">Contact</a>
               </li>
             </ul>
           </div>
@@ -74,8 +75,8 @@
       <!-- HERO BANNER -->
       <div class="container-fluid">
         <div class="container text-center title">
-          <h1  id="home">Ike's Web Page!</h1>
-          <p>My daily life as developer</p>
+          <h1 id="home">Ike's Web Page!</h1>
+          <p>My life as a developer</p>
         </div>
         <div>
           <img class="img-fluid" src="./assets/kb-music.jpg" />
@@ -87,7 +88,7 @@
       </div>
       <!-- HERO BANNER END  -->
     </section>
-    <hr />
+
     <section class="about">
       <div class="container">
         <!-- CAROUSEL START -->
@@ -98,9 +99,9 @@
                 <div class="col-md-8">
                   <img class="img-fluid" src="./assets/tel-eng.jpg" />
                 </div>
-                <div class="col-md-4 text-center">
-                  <h5>Electronics Engineer <i class="bi bi-cpu"></i></h5>
-                  <p>
+                <div class="col-md-4 text-center story">
+                  <h4 class="story">Electronics Engineer <i class="bi bi-cpu"></i></h4>
+                  <p class="story">
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
@@ -120,9 +121,9 @@
                 <div class="col-md-8">
                   <img class="img-fluid" src="./assets/web-dev.jpg" />
                 </div>
-                <div class="col-md-4 text-center">
-                  <h5>Web Developer <i class="bi bi-globe"></i></h5>
-                  <p>
+                <div class="col-md-4 text-center story">
+                  <h4 class="story">Web Developer <i class="bi bi-globe"></i></h4>
+                  <p class="story">
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
@@ -142,9 +143,9 @@
                 <div class="col-md-8">
                   <img class="img-fluid" src="./assets/cof-code.jpg" />
                 </div>
-                <div class="col-md-4 text-center">
-                  <h5>Coffee Lover <i class="bi bi-cup-fill"></i></h5>
-                  <p>
+                <div class="col-md-4 text-center story">
+                  <h4 class="story">Coffee Lover <i class="bi bi-cup-fill"></i></h4>
+                  <p class="story">
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
@@ -164,7 +165,7 @@
         <!-- CAROUSEL END  -->
       </div>
     </section>
-    <hr />
+
     <section class="projects">
       <!-- CARDS  -->
       <div class="container" id="project">
@@ -214,40 +215,39 @@
       </div>
       <!-- CARDS END  -->
     </section>
-    <hr />
-    <section class="contacts">
+
+    <section class="contacts" id="contacts">
       <!-- FORMS -->
       <div class="container">
-        <div class="row ">
-          <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-5">
             <!-- CONTACT FORM -->
-            <form id="contact"> 
-                <div class="form-group>
-                  <label class="label-text" for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
-                </div>
-                <div class="form-group>
-                  <label class="label-text" for="full-name">Name</label>
-                  <input type="password" class="form-control" id="full-name" placeholder="Last Name, First Name" />
-                </div>
-             
-              <div class="form-group">
-                <label class="label-text" for="contact-details">Mobile Number</label>
-                <input type="text" class="form-control" id="contact-details" placeholder="+63 1234567890" />
-              </div>
-              <div class="form-group">
-                <label class="label-text" for="message">Message</label>
-                <input type="text" class="form-control" id="message" placeholder="" />
-              </div>
-              <div class="form-group">
-                <input class="form-check-input" type="checkbox" id="gridCheck" />
-                <label class="form-check-label" for="gridCheck"> Subscribe</label>
-              </div>
-              <button type="submit" class="btn btn-outline-dark">Send <i class="bi bi-send"></i></button>
-            </form>
-            <!-- CONTACT FORM END  -->
+            <div class="form-group">
+              <label class="label-text" for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+            </div>
+            <div class="form-group">
+              <label class="label-text" for="full-name">Name</label>
+              <input type="text" class="form-control" id="full-name" placeholder="Last Name, First Name" />
+            </div>
+
+            <div class="form-group">
+              <label class="label-text" for="contact-details">Mobile Number</label>
+              <input type="text" class="form-control" id="contact-details" placeholder="+63 1234567890" />
+            </div>
+            <div class="form-group">
+              <label class="label-text" for="message">Message</label>
+              <textarea class="form-control" id="message"></textarea>
+              <!-- <input type="text" class="form-control" id="message" placeholder="" /> -->
+            </div>
+            <div class="form-group">
+              <input class="form-check-input" type="checkbox" id="gridCheck" />
+              <label class="form-check-label" for="gridCheck">&nbsp&nbspSubscribe</label>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Send <i class="bi bi-send"></i></button>
           </div>
-          <div class="col-md-6">
+          <!-- CONTACT FORM END  -->
+          <div class="col-md-7">
             <!-- GOOGLE MAP  -->
             <div class="mapouter">
               <div class="gmap_canvas">
@@ -269,20 +269,23 @@
       </div>
       <!-- FORMS END  -->
     </section>
-
     <footer>
-      <div class="container text-center">
-      <a href="#home"><i class="bi bi-house-door-fill"></i></a>
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-linkedin"></i>
-
-      <h6 class="text-center">
-      Copyright &copy; 2021 All rights reserved
-      </h6>
+      <div class="container-fluid text-center d-flex justify-content-around">
+        <div>
+          <a href="#home"><i class="bi bi-house-door-fill"></i></a>
+          <a href="#about"><i class="bi bi-file-person-fill"></i></a>
+          <a href="#project"><i class="bi bi-pc-display-horizontal"></i></i></a>
+          <a href="#contacts"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+        <div>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-github"></i>
+        </div>
       </div>
-   
-      </footer>
+      <h6 class="text-center">Copyright &copy; 2021 All rights reserved</h6>
+    </footer>
   </body>
   <!-- BOOTSTRAP JS FILE -->
   <script src="./js/bootstrap.js"></script>
