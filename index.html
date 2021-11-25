@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- GOOGLE FONT -->
+    <!-- GOOGLE FONT UBUNTU-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
     <title>Capstone 1</title>
@@ -20,8 +20,11 @@
     <header>
       <!-- NAV START -->
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="./assets/myicon.jpg" /></a>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-linkedin"></i>
           <button
             class="navbar-toggler"
             type="button"
@@ -36,10 +39,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link " aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -53,10 +56,13 @@
                   Projects
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Capstone 1</a></li>
-                  <li><a class="dropdown-item" href="#">Capstone 2</a></li>
-                  <li><a class="dropdown-item" href="#">Capstone 3</a></li>
+                  <li><a class="dropdown-item" href="#project">Capstone 1</a></li>
+                  <li><a class="dropdown-item" href="#project">Capstone 2</a></li>
+                  <li><a class="dropdown-item" href="#project">Capstone 3</a></li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -67,7 +73,17 @@
     <section class="home">
       <!-- HERO BANNER -->
       <div class="container-fluid">
-        <img class="img-fluid" src="./assets/kb-music.jpg" />
+        <div class="container text-center title">
+          <h1  id="home">Ike's Web Page!</h1>
+          <p>My daily life as developer</p>
+        </div>
+        <div>
+          <img class="img-fluid" src="./assets/kb-music.jpg" />
+          <div class="banner-caption">
+            <h1>My Portfolio</h1>
+            <p class="banner-caption">Learn more about me...</p>
+          </div>
+        </div>
       </div>
       <!-- HERO BANNER END  -->
     </section>
@@ -75,20 +91,27 @@
     <section class="about">
       <div class="container">
         <!-- CAROUSEL START -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
+        <div id="carousel-about-me" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="about">
             <div class="carousel-item active">
               <div class="row d-flex align-items-center content w-100">
                 <div class="col-md-8">
                   <img class="img-fluid" src="./assets/tel-eng.jpg" />
                 </div>
                 <div class="col-md-4 text-center">
-                  <h1>Hi, I'm Ike!</h1>
-                  <h5>Electronics Engineer</h5>
+                  <h5>Electronics Engineer <i class="bi bi-cpu"></i></h5>
                   <p>
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
+                  <div class="carousel-buttons d-flex justify-content-between">
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
+                      ◀
+                    </button>
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
+                      ▶
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,12 +121,19 @@
                   <img class="img-fluid" src="./assets/web-dev.jpg" />
                 </div>
                 <div class="col-md-4 text-center">
-                  <h1>Hi, I'm Ike!</h1>
-                  <h5>Web Developer</h5>
+                  <h5>Web Developer <i class="bi bi-globe"></i></h5>
                   <p>
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
+                  <div class="carousel-buttons d-flex justify-content-between">
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
+                      ◀
+                    </button>
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
+                      ▶
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,34 +143,23 @@
                   <img class="img-fluid" src="./assets/cof-code.jpg" />
                 </div>
                 <div class="col-md-4 text-center">
-                  <h1>Hi, I'm Ike!</h1>
-                  <h5>Coffee Lover</h5>
+                  <h5>Coffee Lover <i class="bi bi-cup-fill"></i></h5>
                   <p>
                     Proident adipisicing labore ullamco consequat dolor consectetur laboris voluptate. In in aute ad est
                     amet. Mollit consectetur proident voluptate aliqua qui et aliqua occaecat sunt.
                   </p>
+                  <div class="carousel-buttons d-flex justify-content-between">
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
+                      ◀
+                    </button>
+                    <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
+                      ▶
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
         <!-- CAROUSEL END  -->
       </div>
@@ -148,10 +167,10 @@
     <hr />
     <section class="projects">
       <!-- CARDS  -->
-      <div class="container">
+      <div class="container" id="project">
         <div class="row">
           <div class="col-md-4">
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Capstone 1</h5>
@@ -160,12 +179,12 @@
                   consequat ipsum culpa irure in consectetur excepteur aliqua incididunt eiusmod ipsum proident. Sint
                   irure culpa ut officia eu aliqua nulla duis cillum sunt sunt fugiat qui.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Capstone 2</h5>
@@ -174,12 +193,12 @@
                   fugiat cupidatat eiusmod veniam. Eiusmod irure minim tempor sint sit commodo eiusmod. Incididunt anim
                   nostrud tempor culpa non enim est proident cupidatat labore adipisicing quis anim.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" style="width: 18rem">
+            <div class="card">
               <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Capstone 3</h5>
@@ -187,7 +206,7 @@
                   Et magna aliquip elit enim ut aute. Ad non irure dolore reprehenderit deserunt veniam est laboris.
                   Reprehenderit fugiat nulla cillum ut et id elit esse voluptate commodo aute veniam.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -199,72 +218,33 @@
     <section class="contacts">
       <!-- FORMS -->
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="col-md-6">
             <!-- CONTACT FORM -->
-            <style>
-              body {
-                font-family: Arial, Helvetica, sans-serif;
-              }
-              /* * {
-                box-sizing: border-box;
-              } */
-
-              input[type="text"],
-              select,
-              textarea {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                margin-top: 6px;
-                margin-bottom: 16px;
-                resize: vertical;
-              }
-
-              input[type="submit"] {
-                background-color: #04aa6d;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-              }
-
-              input[type="submit"]:hover {
-                background-color: #45a049;
-              }
-
-              /* .container {
-                border-radius: 5px;
-                background-color: #f2f2f2;
-                padding: 20px;
-              } */
-            </style>
-            <h3>Contact Form</h3>
-
-            <div class="container">
-              <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." />
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
-
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
-                </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
-
-                <input type="submit" value="Submit" />
-              </form>
-            </div>
+            <form id="contact"> 
+                <div class="form-group>
+                  <label class="label-text" for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+                </div>
+                <div class="form-group>
+                  <label class="label-text" for="full-name">Name</label>
+                  <input type="password" class="form-control" id="full-name" placeholder="Last Name, First Name" />
+                </div>
+             
+              <div class="form-group">
+                <label class="label-text" for="contact-details">Mobile Number</label>
+                <input type="text" class="form-control" id="contact-details" placeholder="+63 1234567890" />
+              </div>
+              <div class="form-group">
+                <label class="label-text" for="message">Message</label>
+                <input type="text" class="form-control" id="message" placeholder="" />
+              </div>
+              <div class="form-group">
+                <input class="form-check-input" type="checkbox" id="gridCheck" />
+                <label class="form-check-label" for="gridCheck"> Subscribe</label>
+              </div>
+              <button type="submit" class="btn btn-outline-dark">Send <i class="bi bi-send"></i></button>
+            </form>
             <!-- CONTACT FORM END  -->
           </div>
           <div class="col-md-6">
@@ -280,23 +260,7 @@
                   scrolling="no"
                   marginheight="0"
                   marginwidth="0"
-                ></iframe
-                ><a href="https://123movies-to.org"></a><br /><style>
-                  .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 500px;
-                    width: 600px;
-                  }</style
-                ><a href="https://www.embedgooglemap.net">how to add a google map to my website</a
-                ><style>
-                  .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    height: 500px;
-                    width: 600px;
-                  }
-                </style>
+                ></iframe>
               </div>
             </div>
             <!-- GOOGLE MAP END -->
@@ -305,11 +269,22 @@
       </div>
       <!-- FORMS END  -->
     </section>
-    <hr />
+
     <footer>
-      <div class="container-fluid bg-dark footer text-center"><strong>Copyright © Manuel Ike Lagos 2021</strong></div>
-    </footer>
+      <div class="container text-center">
+      <a href="#home"><i class="bi bi-house-door-fill"></i></a>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-linkedin"></i>
+
+      <h6 class="text-center">
+      Copyright &copy; 2021 All rights reserved
+      </h6>
+      </div>
+   
+      </footer>
   </body>
   <!-- BOOTSTRAP JS FILE -->
   <script src="./js/bootstrap.js"></script>
+  <script src="./js/script.js"></script>
 </html>
