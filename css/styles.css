@@ -98,11 +98,11 @@ section.contacts label {
 }
 
 section.contacts input {
-  width: 80%;
+  width: 92%;
 }
 
 section.contacts textarea {
-  width: 80%;
+  width: 92%;
   height: 5rem;
   margin-bottom: 1rem;
 }
