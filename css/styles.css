@@ -6,6 +6,7 @@
 
 nav.navbar {
   background-color: black;
+  border-bottom: solid gray 1px;
 }
 
 nav img {
@@ -45,6 +46,10 @@ div.banner-caption p {
   color: gray;
 }
 
+div.carousel {
+  padding: 2% 0%;
+}
+
 div.carousel button {
   padding: 0 1rem;
   color: azure;
@@ -63,25 +68,33 @@ p.story {
   color: rgba(240, 255, 255, 0.808);
 }
 
+div.divider {
+  padding: 2rem;
+}
+
+img.skills {
+  border-radius: 50%;
+  padding: 1rem 4rem;
+}
+
+div.skills.card {
+  color: rgba(240, 255, 255, 0.808);
+  background-color: black;
+}
+
 div.card {
   margin-bottom: 2rem;
   color: rgba(7, 7, 7, 0.863);
   background-color: rgba(255, 255, 255, 0.925);
+  padding: 2% 5%;
+  border-radius: 5%;
 }
 
-/* GOOGLE MAP  */
-
-.mapouter {
-  position: relative;
-  text-align: right;
+.card h5 {
+  margin-bottom: 20px;
 }
 
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-}
-
-section.contacts form {
+section.contacts {
   padding-bottom: 2rem;
 }
 
@@ -89,39 +102,48 @@ section.contacts div {
   padding: 0.5;
 }
 
-section.contacts label.label-text {
-  padding: 0.3rem 0;
-}
-
-section.contacts label {
-  color: azure;
+section.contacts .contact-banner {
+  color: #d54e00;
 }
 
 section.contacts input {
-  width: 92%;
+  background-color: rgb(212, 212, 212);
 }
 
 section.contacts textarea {
-  width: 92%;
-  height: 5rem;
-  margin-bottom: 1rem;
+  background-color: rgb(212, 212, 212);
 }
 
-section.contacts input[type="checkbox"] {
-  width: 1rem;
-  padding: 0 0.5rem 0 0;
+section.contacts div {
+  background-color: black;
+  border-radius: 50%;
+  padding-right: 1rem;
 }
 
-section.contacts button {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+section.contacts div.contact-banner {
+  background-color: black !important;
+}
+
+section.contacts div i {
   color: azure;
+}
+
+section.contacts iframe {
+  width: 100%;
+  height: 100%;
+}
+
+section.contacts input[type="submit"],
+input[type="reset"] {
+  margin: 1rem 1rem;
+  border: 0;
 }
 
 footer {
   background-color: black;
   color: azure;
   padding: 1rem 0;
+  border-top: 1px grey solid;
 }
 
 footer i {
@@ -151,7 +173,13 @@ div button:hover {
 
 div.card a:hover {
   color: #d54e00;
-  background-color: silver;
+  background-color: black;
+}
+
+form input[type="submit"]:hover,
+input[type="reset"]:hover {
+  color: #d54e00;
+  background-color: black;
 }
 
 div.row {
@@ -162,4 +190,25 @@ section {
   /* background-color: rgb(212, 212, 212); */
   background-color: black;
   padding-top: 1%;
+}
+
+/* ANIMATIONS */
+
+h1 span {
+  transition: 2s linear;
+}
+h1:hover span:nth-child(1) {
+  margin-right: 5px;
+}
+
+section.home:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+section.home:hover span {
+  color: #d54e00;
+  text-shadow: 0 0 5px #d54e00, 0 0 10px #d54e00, 0 0 5px black;
+}
+
+div.divider {
+  background-color: black;
 }

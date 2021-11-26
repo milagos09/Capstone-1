@@ -34,8 +34,8 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+            >
+          <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -53,8 +53,8 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >
-                  Projects
+                  >
+                Projects
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#project">Capstone 1</a></li>
@@ -75,7 +75,7 @@
       <!-- HERO BANNER -->
       <div class="container-fluid">
         <div class="container text-center title">
-          <h1 id="home">Ike's Web Page!</h1>
+          <h1 id="home"><span>Ike's Web Page</span></h1>
           <p>My life as a developer</p>
         </div>
         <div>
@@ -88,11 +88,13 @@
       </div>
       <!-- HERO BANNER END  -->
     </section>
-
+    <div class="container-fluid text-center divider about">
+      <h2>About me</h2>
+    </div>
     <section class="about">
       <div class="container">
         <!-- CAROUSEL START -->
-        <div id="carousel-about-me" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel-about-me" class="carousel slide" data-bs-interval="6500" data-bs-ride="carousel" data-bs-pause="hover">
           <div class="carousel-inner" id="about">
             <div class="carousel-item active">
               <div class="row d-flex align-items-center content w-100">
@@ -102,14 +104,14 @@
                 <div class="col-md-4 text-center story">
                   <h4 class="story">Electronics Engineer <i class="bi bi-cpu"></i></h4>
                   <p class="story">
-                    By profession I'm an engineer, I started my career as Broadcast technician on a local radio station in my hometown. And the only thing I learned from that experience is that that's not what I wanted as a profession. 😓
+                    By profession I'm an engineer, I started my career as Broadcast technician on a local radio station in my hometown. And the only thing I learned from that experience is that that's not what I wanted as a profession 😓. Fast forward to now I'am an Engineer working for the government.
                   </p>
                   <div class="carousel-buttons d-flex justify-content-between">
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
-                      ◀
+                    ◀
                     </button>
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
-                      ▶
+                    ▶
                     </button>
                   </div>
                 </div>
@@ -123,14 +125,14 @@
                 <div class="col-md-4 text-center story">
                   <h4 class="story">Web Developer <i class="bi bi-globe"></i></h4>
                   <p class="story">
-                    I started relearning programming around 2020, when the pandemic is at its peak. I really got bored from my daily task on generating data and converting them to something readable. I learned automation by using VBA 👨‍💻. I had fun along the way, but something was missing. After a long thought process I knew what it was. I needed to put my daily task on the web and automate it. So I started learning JavaScript. 😎  
+                    I started relearning programming around 2020, when the pandemic is at its peak. First it was just VBA, then around this year I started learning HTML CSS and JavaScript. After learning some basic tricks I started working with a simple project with google scripts. 
                   </p>
                   <div class="carousel-buttons d-flex justify-content-between">
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
-                      ◀
+                    ◀
                     </button>
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
-                      ▶
+                    ▶
                     </button>
                   </div>
                 </div>
@@ -144,14 +146,14 @@
                 <div class="col-md-4 text-center story">
                   <h4 class="story">Coffee Lover <i class="bi bi-cup-fill"></i></h4>
                   <p class="story">
-                    The only thing that keeps me going in the morning is coffee ☕, besides from waking up to go to work, I look forward to drinking my favorite coffee. Only thing that's stopping me from drinking it all the time is my acid reflux. 😅
+                    The only thing that keeps me going in the morning is coffee ☕, and sometimes that the only reason why I wake up early. Only thing that's stopping me from drinking it all the time is my acid reflux. 😅
                   </p>
                   <div class="carousel-buttons d-flex justify-content-between">
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="next">
-                      ◀
+                    ◀
                     </button>
                     <button class="btn btn-outline-dark" data-bs-target="#carousel-about-me" data-bs-slide="prev">
-                      ▶
+                    ▶
                     </button>
                   </div>
                 </div>
@@ -161,50 +163,95 @@
         </div>
       </div>
       <!-- CAROUSEL END  -->
+      <div class="container-fluid text-center divider skills">
+        <h2>Technical Knowledge and Skills</h2>
+      </div>
+      <!-- SKILL  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 skills-card">
+            <div class="card skills">
+              <img src="./assets/html.webp" class="card-img-top skills" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">HTML</h5>
+                <p class="card-text">
+                  First time I learned HTML was back in highschool, started coding using notepad and using the internet for resources is considered as a luxury. My first webpage deployment was hosted by Yahoo's GeoCities (I feel old now 😖)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 skills-card">
+            <div class="card skills">
+              <img src="./assets/boostrap.svg" class="card-img-top skills" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Bootstrap</h5>
+                <p class="card-text">
+                  There's nothing much to say here. When I started learning CSS I usually waste a lot of time figuring things out by trial and errors. The majority of my web development is being consumed by styling. When I discovered bootstrap my css coding was reduced to almost 90%. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 skills-card">
+            <div class="card skills">
+              <img src="./assets/js.webp" class="card-img-top skills" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">
+                  I started learning JavaScript after learning VBA, I am comfortable of using logical conditions such as If and else statements combined with "AND", "OR" and "NOT" operators. And since I'am more focused on automating tasks the "FOR" and "WHILE" loops are my forte. In addition to the basics, I'm also familiar with ECMAScript 6 syntaxes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SKILL  END  -->
+      </div>
     </section>
-
+    <div class="container-fluid text-center divider projects">
+      <h2>My Projects</h2>
+    </div>
     <section class="projects">
       <!-- CARDS  -->
       <div class="container" id="project">
         <div class="row">
           <div class="col-md-4">
             <div class="card">
-              <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
+              <img src="./assets/captone1.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Capstone 1</h5>
+                <h5 class="card-title">Front End: My Portfolio</h5>
                 <p class="card-text">
                   Ad proident laboris id pariatur sint fugiat ea sint minim proident id deserunt qui. Labore minim ex
                   consequat ipsum culpa irure in consectetur excepteur aliqua incididunt eiusmod ipsum proident. Sint
                   irure culpa ut officia eu aliqua nulla duis cillum sunt sunt fugiat qui.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                <a href="https://mil-capstone1.w3spaces.com" target="_blank" class="btn btn-outline-dark">Live Demo</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
+              <img src="./assets/captone2.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Capstone 2</h5>
+                <h5 class="card-title">Back End: Nodejs and API's</h5>
                 <p class="card-text">
                   Nostrud nisi tempor ea culpa elit amet. Reprehenderit ullamco velit quis mollit sunt sit voluptate
                   fugiat cupidatat eiusmod veniam. Eiusmod irure minim tempor sint sit commodo eiusmod. Incididunt anim
                   nostrud tempor culpa non enim est proident cupidatat labore adipisicing quis anim.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                <a href="#" class="btn btn-outline-dark">Live Demo</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="./assets/automation.jpg" class="card-img-top" alt="..." />
+              <img src="./assets/captone3.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Capstone 3</h5>
+                <h5 class="card-title">Full-stack: M-E-R-N</h5>
                 <p class="card-text">
                   Et magna aliquip elit enim ut aute. Ad non irure dolore reprehenderit deserunt veniam est laboris.
                   Reprehenderit fugiat nulla cillum ut et id elit esse voluptate commodo aute veniam.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                <a href="#" class="btn btn-outline-dark">Live Demo</a>
               </div>
             </div>
           </div>
@@ -212,73 +259,80 @@
       </div>
       <!-- CARDS END  -->
     </section>
-
+    <div class="container-fluid text-center divider contact">
+      <h2>Contact me</h2>
+    </div>
     <section class="contacts" id="contacts">
-      <!-- FORMS -->
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
-            <!-- CONTACT FORM -->
-            <div class="form-group">
-              <label class="label-text" for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
-            </div>
-            <div class="form-group">
-              <label class="label-text" for="full-name">Name</label>
-              <input type="text" class="form-control" id="full-name" placeholder="Last Name, First Name" />
-            </div>
-
-            <div class="form-group">
-              <label class="label-text" for="contact-details">Mobile Number</label>
-              <input type="text" class="form-control" id="contact-details" placeholder="+63 1234567890" />
-            </div>
-            <div class="form-group">
-              <label class="label-text" for="message">Message</label>
-              <textarea class="form-control" id="message"></textarea>
-              <!-- <input type="text" class="form-control" id="message" placeholder="" /> -->
-            </div>
-            <div class="form-group">
-              <input class="form-check-input" type="checkbox" id="gridCheck" />
-              <label class="form-check-label" for="gridCheck">&nbsp&nbspSubscribe</label>
-            </div>
-            <button type="submit" class="btn btn-outline-dark">Send <i class="bi bi-send"></i></button>
-          </div>
-          <!-- CONTACT FORM END  -->
+          <!-- CONTACT FORM  -->
           <div class="col-md-7">
-            <!-- GOOGLE MAP  -->
-            <div class="mapouter">
-              <div class="gmap_canvas">
-                <iframe
-                  width="600"
-                  height="500"
-                  id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=iloilo&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0"
-                  scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
-                ></iframe>
-              </div>
+            <div class="row justify-content-center">
+              <form action="mail.php" method="post">
+                <div class="card border-dark rounded-0">
+                 
+                    <div class="text-center container-fluid contact-banner">
+                      <h3><i class="fa fa-envelope"></i> Contact me 😁</h3>
+                      <p class="m-0">Tell me what you think...</p>
+                    </div>
+              
+                  <div class="card-body p-3">
+                    <div class="form-group">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="bi bi-person-circle"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="bi bi-envelope-fill"></i></i></div>
+                        </div>
+                        <input type="email" class="form-control" id="nombre" name="email" placeholder="juandelacruz@email.com" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="bi bi-chat-square-dots-fill"></i></i></div>
+                        </div>
+                        <textarea class="form-control" placeholder="Message" required></textarea>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <input type="reset" value="Reset ❌" class="btn btn-outline-dark">
+                      <input type="submit" value="Send ✉" class="btn btn-outline-dark">
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <!-- GOOGLE MAP END -->
+          </div>
+          <div class="col-md-5">
+        
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.4101322928077!2d121.04148921466494!3d14.63264508978205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7f5db7f5e3f%3A0xe15d2d6a4453ed00!2sZuitt%20QC!5e0!3m2!1sen!2sph!4v1637904393206!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         
           </div>
         </div>
       </div>
-      <!-- FORMS END  -->
     </section>
     <footer>
       <div class="container-fluid text-center d-flex justify-content-around">
-        <div>
-          <a href="#home"><i class="bi bi-house-door-fill"></i></a>
-          <a href="#about"><i class="bi bi-file-person-fill"></i></a>
-          <a href="#project"><i class="bi bi-pc-display-horizontal"></i></i></a>
-          <a href="#contacts"><i class="bi bi-telephone-fill"></i></a>
-        </div>
-        <div>
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-linkedin"></i>
-          <i class="bi bi-github"></i>
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <a href="#home"><i class="bi bi-house-door-fill"></i></a>
+            <a href="#about"><i class="bi bi-file-person-fill"></i></a>
+            <a href="#project"><i class="bi bi-pc-display-horizontal"></i></i></a>
+            <a href="#contacts"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-github"></i>
+          </div>
         </div>
       </div>
       <h6 class="text-center">Copyright &copy; 2021 All rights reserved</h6>
