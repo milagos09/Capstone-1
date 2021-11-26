@@ -124,6 +124,10 @@ section.contacts div.contact-banner {
   background-color: black !important;
 }
 
+section.contacts p {
+  color: grey;
+}
+
 section.contacts div i {
   color: azure;
 }
@@ -211,4 +215,24 @@ section.home:hover span {
 
 div.divider {
   background-color: black;
+}
+
+/* GLOW */
+.glow {
+  /* font-size: 80px; */
+  color: grey;
+  text-align: center;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px grey, 0 0 5px grey, 0 0 8px black, 0 0 10px black, 0 0 20px black, 0 0 30px black,
+      0 0 70px black;
+  }
+
+  to {
+    text-shadow: 0 0 3px grey, 0 0 5px #d54e00, 0 0 8px #d54e00, 0 0 10px #d54e00, 0 0 20px #d54e00, 0 0 30px #d54e00,
+      0 0 40px #d54e00;
+  }
 }
