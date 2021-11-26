@@ -225,7 +225,19 @@ div.divider {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px grey, 0 0 5px grey, 0 0 8px black, 0 0 10px black, 0 0 20px black, 0 0 30px black,
+      0 0 70px black;
+  }
+
+  to {
+    text-shadow: 0 0 3px grey, 0 0 5px #d54e00, 0 0 8px #d54e00, 0 0 10px #d54e00, 0 0 20px #d54e00, 0 0 30px #d54e00,
+      0 0 40px #d54e00;
+  }
+} */
+
+@keyframes glow {
   from {
     text-shadow: 0 0 3px grey, 0 0 5px grey, 0 0 8px black, 0 0 10px black, 0 0 20px black, 0 0 30px black,
       0 0 70px black;
