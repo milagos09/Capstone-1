@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flappy Bird Demo</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background: #000;
+            }
+            #flappy-bird {
+                position: absolute;
+                background: url("./assets/bird.gif");
+                background-size: cover;
+                height: 60px;
+                width: 60px;
+                left: 250px;
+                top: 100px;
+            }
+            .crash {
+                background: url("./assets/explode.gif");
+                background-size: contain;
+                width: 40px;
+                height: 45px;
+                position: absolute;
+                left: 260px;
+                display: none;
+            }
+            #background {
+                background: url("./assets/background0.gif");
+                height: 400px;
+                width: 800px;
+                background-size: contain;
+            }
+            .pipes0 {
+                position: absolute;
+                background: url("./assets/pipe.png");
+                background-size: 55px 150px;
+                width: 55px; /*fixed width*/
+                height: 150px;
+                transform: rotate(180deg);
+            }
+            .pipes1 {
+                position: absolute;
+                background: url("./assets/pipe.png");
+                background-size: 55px 150px;
+                width: 55px; /*fixed width*/
+                height: 150px;
+            }
+
+            #score {
+                color: wheat;
+                position: absolute;
+                left: 810px;
+                top: 20px;
+                font-size: 23px;
+                border: 2px solid #86419c;
+                padding: 2px 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="flappy-bird"></div>
+        <span class="crash"></span>
+        <span id="score">Score: 0</span>
+    </body>
+
+    <script>
+        const gameSpeed = 90;
+        const bird = {
+            doc: document.getElementById("flappy-bird"),
+            x: 250,
+            y: 100,
+            g: 0,
+            offset: 60,
+            score: 0,
+        };
+        const bg = {
+            doc: document.getElementById("background"),
+            height: 400,
+            width: 800,
+        };
+
+        alert("Start Game?");
+        setTimeout(() => {
+            createPipe();
+        }, gameSpeed * 40);
+        createPipe();
+
+        const gameLoop = setInterval(() => {
+            gravity();
+            motion();
+            document.getElementById("score").innerText = `Score: ${bird.score}`;
+            if (bird.score == 6) {
+                bg.doc.style.backgroundImage = "url(./assets/background1.gif)";
+            } else if (bird.score == 11) {
+                bg.doc.style.backgroundImage = "url(./assets/background2.gif)";
+            }
+        }, gameSpeed);
+
+        function gravity() {
+            bird.doc.style.left = bird.x + "px";
+            bird.doc.style.top = bird.y + "px";
+            bird.doc.style.transform = `rotate(${bird.g}deg)`;
+            bird.y += 10 + bird.g;
+            bird.g += 3;
+        }
+
+        function motion() {
+            const pipesTop = document.querySelectorAll(".pipes0");
+            const pipesBot = document.querySelectorAll(".pipes1");
+            let x, yTop, yBot;
+            for (let i = 0; i < pipesTop.length; i++) {
+                x = Number(pipesTop[i].style.left.replace("px", ""));
+                x -= 10 + Math.floor(bird.score / 2);
+                pipesTop[i].style.left = x + "px";
+                pipesBot[i].style.left = x + "px";
+
+                if (x <= -10) {
+                    pipesTop[i].remove();
+                    pipesBot[i].remove();
+                    createPipe();
+                }
+
+                yTop = Number(pipesTop[i].style.height.replace("px", ""));
+                yBot = Number(pipesBot[i].style.top.replace("px", ""));
+
+                yCollision(yTop, yBot, x);
+                if (xCollision(x + 60) && pipesBot[i].id == "1") {
+                    pipesBot[i].id = "";
+                    bird.score++;
+                    sound("score.mp3");
+                }
+            }
+        }
+
+        function xCollision(x) {
+            if (x <= 250 + 45 && x >= 220) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function yCollision(yTop, yBot, x) {
+            if (
+                (bird.y <= yTop && xCollision(x)) ||
+                (bird.y + bird.offset - 25 >= yBot && xCollision(x)) ||
+                bird.y >= 380
+            ) {
+                gameOver();
+            }
+        }
+
+        function gameOver() {
+            clearInterval(gameLoop);
+            const crash = document.querySelector(".crash");
+            sound("explode.wav");
+            crash.style.display = "block";
+            crash.style.top = bird.y - 15 + "px";
+            bird.doc.style.transform = "rotate(90deg)";
+            alert(`You crashed! 💥💥💥`);
+            location.reload();
+        }
+
+        function createPipe() {
+            const pipeTop = document.createElement("div");
+            const pipeHeight = Math.ceil(Math.random() * 190 + bird.offset);
+            pipeTop.className = "pipes0";
+            pipeTop.style.backgroundSize = `55px ${pipeHeight}px`;
+            pipeTop.style.height = `${pipeHeight - bird.offset}px`;
+            pipeTop.style.left = "800px";
+            pipeTop.style.top = `0px`;
+            bg.doc.appendChild(pipeTop);
+
+            // create another pipe
+            const pipeBot = document.createElement("div");
+            pipeBot.className = "pipes1";
+            pipeBot.style.backgroundSize = `55px ${bg.height - pipeHeight}px`;
+            pipeBot.style.height = `${bg.height - pipeHeight - bird.offset}px`;
+            pipeBot.style.left = "800px";
+            pipeBot.style.top = `${pipeHeight + bird.offset}px`;
+            pipeBot.id = "1";
+            bg.doc.appendChild(pipeBot);
+        }
+
+        function sound(s) {
+            new Audio(`./assets/${s}`).play();
+        }
+
+        function flap() {
+            sound("flap.mp3");
+            bird.y -= 50;
+            bird.g = 0;
+            bird.doc.style.transform = "rotate(-20deg)";
+        }
+
+        document.onkeyup = function (e) {
+            if (e.key !== " ") return;
+            flap();
+        };
+
+        document.addEventListener("click", flap);
+    </script>
+</html>
