@@ -1,0 +1,99 @@
+body {
+    background: black;
+    margin: 0;
+    color: aliceblue;
+}
+
+div.row div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: -3px;
+}
+div.brick {
+    background: url("./img/brick.png");
+    background-size: cover;
+}
+div.coin {
+    background: url("./img/coin.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 67%;
+}
+
+div.cherry {
+    background: url("./img/cherry.PNG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div#pacman {
+    background: url("./img/pacman.gif");
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 120px;
+    left: 140px;
+}
+div#ghost1 {
+    background: url("./img/blinky-cyan.gif");
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+div#ghost2 {
+    background: url("./img/blinky-purple.gif");
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 220px;
+    left: 20px;
+    z-index: 10;
+}
+
+div#ghost3 {
+    background: url("./img/blinky-red.gif");
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 260px;
+    z-index: 10;
+}
+
+div#ghost4 {
+    background: url("./img/blinky-yellow.gif");
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 220px;
+    left: 260px;
+    z-index: 10;
+}
+
+footer {
+    display: inline-flex;
+}
+
+h3 {
+    padding: 0 40px;
+}
+
+#game-over {
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background: black;
+    position: absolute;
+    display: none;
+}
