@@ -90,6 +90,10 @@ div.card {
     border-radius: 5%;
 }
 
+.card-body a {
+    color: wheat;
+}
+
 .card h5 {
     margin-bottom: 20px;
 }
