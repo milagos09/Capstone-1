@@ -252,3 +252,8 @@ div.divider {
             0 0 30px #d54e00, 0 0 40px #d54e00;
     }
 }
+
+.card-text {
+    overflow: auto;
+    max-height: 250px;
+}

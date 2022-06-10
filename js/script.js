@@ -10,3 +10,10 @@
 //   //   learnMore.style.color = "#d54e00";
 //   learnMore.classList.add("glow");
 // }
+
+copyright.innerText = `Copyright © ${new Date().getFullYear()} All rights reserved`;
+
+//event on hover
+document.getElementById("form").addEventListener("click", function () {
+    alert("this is a static website and does not have a backend feature,💔");
+});
